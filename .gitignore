@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment and config files (secrets)
+.env
+.env.*
+config.ini
+credentials.json
+*.key
+
+# Logs from your downloader script
+_download_log.txt
+_failed_downloads.txt
+_successful_downloads.txt
+
+# Large audio files (very important!)
+*.flac
+*.wav
+*.aiff
+*.shn
+*.mp3
+*.m4a
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary / build files
+*.tmp
+*.temp
+build/
+dist/
+*.egg-info/
