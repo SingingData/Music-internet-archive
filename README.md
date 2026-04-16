@@ -1,7 +1,7 @@
 # Getting Media Files from Internet Archive
 ###
 ### Scripts to list, get sizes and download media files on internet archive.
-
+Inspired by Adam Jacobs and his collection.  https://blockclubchicago.org/2026/04/10/from-early-nirvana-to-phish-a-chicago-fans-secret-recordings-of-10000-shows-are-now-online/?utm_content=bufferfdba3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 #### Scripts:
 
