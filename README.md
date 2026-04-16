@@ -26,3 +26,6 @@ Simple diagnostic of levels in the WAV file.
 #### Transform_Configuration
 Configurations in txt file within that designate levels for audio improvement.
 
+#### Mock_dot_env_file
+Create your .env file with this format - configure with your own path files.  Save this at the same folder location as the scripts.
+
