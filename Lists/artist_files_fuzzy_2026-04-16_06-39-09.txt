@@ -1,8 +1,7 @@
-# Fuzzy Artist Match Report - 2026-04-15 18:38:14
-# Search artists: nirvana, sonic youth, super chunk, phish, nick cave, wilco, tracy chapman, the replacements
-# Total matching files found: 186
+# Fuzzy Artist Match Report - 2026-04-16 06:39:09
+# Search artists: rem, the cure
+# Total matching files found: 61
 #========================================================================================
-
 
 E:\aadamjacobs\Originals\WAV\ajc00270_bean-rizzo2013-09-10\11 Then She Remembers [Dream Syndicate].wav
 E:\aadamjacobs\Originals\WAV\ajc02667_rem1987-11-04.aud\rem1987-11-04.aud-t-01.wav
