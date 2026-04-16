@@ -1,0 +1,2 @@
+filename,full_path,exists,duration_seconds,sample_rate,channels,bit_depth,file_size_mb,peak_dBFS,rms_dBFS,error
+FlamingLips2003-05-03t03.wav,E:\aadamjacobs\Originals\WAV\ajc00685_flaming-lips-2003-05-03\FlamingLips2003-05-03t03.wav,True,292.133,44100,2,16,49.145,-0.46,10.27,

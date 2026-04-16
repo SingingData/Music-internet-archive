@@ -1,0 +1,11 @@
+Audio Diagnosis Report - 2026-04-15 17:18:02
+================================================================================
+
+Total files in list : 1
+Files found         : 1
+Files missing       : 0
+
+OK   FlamingLips2003-05-03t03.wav
+     Duration : 292.133s | Channels : 2 | Sample Rate : 44100 Hz
+     Peak     : -0.46 dBFS | RMS : 10.27 dBFS
+
