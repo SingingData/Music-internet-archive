@@ -2,6 +2,9 @@
 # ====================== PATH SETTINGS ======================
 # These tell the script where to find files and where to save cleaned versions
 
+
+COLLECTION_ID=aadamjacobs #customize to what you want.
+
 DOWNLOAD_BASE_PATH=D:\FOLDER PATH
 FLAC_INPUT_ROOT=E:\FOLDER PATH
 WAV_OUTPUT_ROOT=E:\FOLDER PATH
