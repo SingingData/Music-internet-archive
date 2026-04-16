@@ -1,0 +1,191 @@
+# Fuzzy Artist Match Report - 2026-04-15 18:38:14
+# Search artists: nirvana, sonic youth, super chunk, phish, nick cave, wilco, tracy chapman, the replacements
+# Total matching files found: 186
+#========================================================================================
+
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T01.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T02.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T03.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T04.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T05.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T06.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T07.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T08.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T09.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T10.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T11.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T12.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T13.wav
+E:\aadamjacobs\Originals\WAV\ajc00795_nirvana-1989-07-08\Nirvana1989-07-08T14.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T01.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T02.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T03.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T04.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T05.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T06.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T07.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T08.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T09.wav
+E:\aadamjacobs\Originals\WAV\ajc00917_sonic-youth-1986-07-17\SonicYouth1986-07-17T10.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t01.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t02.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t03.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t04.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t05.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t06.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t07.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t08.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t09.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t10.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t11.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t12.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t13.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t14.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t15.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t16.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t17.wav
+E:\aadamjacobs\Originals\WAV\ajc00921_sonic-youth-2007-07-13\sonic youth2007-07-13t18.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t01.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t02.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t03.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t04.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t05.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t06.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t07.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t08.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t09.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t10.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t11.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t12.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t13.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t14.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t15.wav
+E:\aadamjacobs\Originals\WAV\ajc01084_superchunk1997-10-23\superchunk1997-10-23t16.wav
+E:\aadamjacobs\Originals\WAV\ajc01090_superchunk1997-10-22\superchunk1997-10-22t01.wav
+E:\aadamjacobs\Originals\WAV\ajc01090_superchunk1997-10-22\superchunk1997-10-22t02.wav
+E:\aadamjacobs\Originals\WAV\ajc01090_superchunk1997-10-22\superchunk1997-10-22t03.wav
+E:\aadamjacobs\Originals\WAV\ajc01090_superchunk1997-10-22\superchunk1997-10-22t04.wav
+E:\aadamjacobs\Originals\WAV\ajc01090_superchunk1997-10-22\superchunk1997-10-22t05.wav
+E:\aadamjacobs\Originals\WAV\ajc01090_superchunk1997-10-22\superchunk1997-10-22t06.wav
+E:\aadamjacobs\Originals\WAV\ajc01090_superchunk1997-10-22\superchunk1997-10-22t07.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t01.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t02.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t03.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t05.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t06.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t07.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t08.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t09.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t10.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t11.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t12.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t13.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t14.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t15.wav
+E:\aadamjacobs\Originals\WAV\ajc01304_sonic-youth-2009-06-27\SonicYouth2009-06-27t16.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T01.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T02.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T03.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T04.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T05.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T06.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T07.wav
+E:\aadamjacobs\Originals\WAV\ajc01505_phish_1990-11-09\Phish1990-11-09T08.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t01.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t02.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t03.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t04.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t05.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t06.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t07.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t08.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t09.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t10.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t11.wav
+E:\aadamjacobs\Originals\WAV\ajc02569_nick-cave-1985-10-24\NickCave1985-10-24t12.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t01.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t02.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t03.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t04.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t05.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t06.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t07.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t08.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t09.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t10.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t11.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t12.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t13.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t14.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t15.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t16.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t17.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t18.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t19.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t20.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t21.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t22.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t23.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t24.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t25.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t26.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t27.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t28.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t29.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t30.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t31.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t32.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t33.wav
+E:\aadamjacobs\Originals\WAV\ajc02572_the-replacements-1987-08-07\TheReplacements1987-08-07t34.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t01.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t02.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t03.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t04.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t05.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t06.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t07.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t08.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t09.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t10.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t11.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t12.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t13.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t14.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t15.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t16.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t17.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t18.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t19.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t20.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t21.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t22.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t23.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t24.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t25.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t26.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t27.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t28.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t29.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t30.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t31.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t32.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t33.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t34.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t35.wav
+E:\aadamjacobs\Originals\WAV\ajc02862_wilco-2011-12-13\Wilco2011-12-13t36.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t01.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t02.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t03.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t04.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t05.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t06.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t07.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t08.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t09.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t10.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t11.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t12.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t13.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t14.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t15.wav
+E:\aadamjacobs\Originals\WAV\ajc02870_tracy-chapman-1988-05-07\TracyChapman1988-05-07t16.wav
