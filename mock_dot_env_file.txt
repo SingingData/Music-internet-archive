@@ -1,0 +1,34 @@
+
+# ====================== PATH SETTINGS ======================
+# These tell the script where to find files and where to save cleaned versions
+
+DOWNLOAD_BASE_PATH=D:\FOLDER PATH
+FLAC_INPUT_ROOT=E:\FOLDER PATH
+WAV_OUTPUT_ROOT=E:\FOLDER PATH
+
+DIAGNOSE_LIST=C:\PATH TO FILE
+DIAGNOSE_SOURCE=E:\PATH TO FILE
+DIAGNOSE_OUTPUT=C:\PATH TO FILE
+
+
+# Path to the artist search list - these are artists recordings you want to spend time transforming.
+ARTIST_LIST=C:\PATH TO FILE
+
+# Folder where the final list of matching audio file list from the ARTIST_LIST will be saved
+ARTIST_REPORTS=C:\FOLDER PATH
+
+TRANSFORM_CONFIG = C:\PATH TO FILE
+
+CLEANING_LIST=C:\PATH TO FILE
+# Path to the text file that lists which recordings to process
+
+DIAGNOSE_SOURCE=E:\FOLDER PATH
+# Root folder where your original WAV files are stored (script searches recursively)
+
+CLEANED_1=E:\FOLDER PATH
+# Folder where the cleaned/processed files will be saved (folder structure is preserved)
+
+
+
+
+
