@@ -1,6 +1,7 @@
 """
-BATCH AUDIO CLEANER - Vocal Boost + Tinny Highs Fix
-===================================================
+BATCH AUDIO CLEANER - Transform Config Location ONLY from .env
+==============================================================
+TRANSFORM_CONFIG is now strictly read from .env only.
 """
 
 import os
@@ -10,40 +11,66 @@ from datetime import datetime
 from tqdm import tqdm
 from pydub import AudioSegment
 
-# ========================== LOAD FROM .env ==========================
+# ========================== LOAD PATHS FROM .env ONLY ==========================
 load_dotenv()
 
-CLEANING_LIST         = os.getenv("CLEANING_LIST")
-DIAGNOSE_SOURCE       = os.getenv("DIAGNOSE_SOURCE")
-CLEANED_1             = os.getenv("CLEANED_1")
+CLEANING_LIST     = os.getenv("CLEANING_LIST")
+DIAGNOSE_SOURCE   = os.getenv("DIAGNOSE_SOURCE")
+CLEANED_1         = os.getenv("CLEANED_1")
+TRANSFORM_CONFIG  = os.getenv("TRANSFORM_CONFIG")
 
-GAIN_REDUCTION_DB     = float(os.getenv("GAIN_REDUCTION_DB", "-5.0"))
-HIGH_PASS_FREQ        = int(os.getenv("HIGH_PASS_FREQ", "100"))
-HARSH_CUT_DB          = float(os.getenv("HARSH_CUT_DB", "-4.5"))
-HARSH_CUT_FREQ        = int(os.getenv("HARSH_CUT_FREQ", "5200"))
-WARMTH_BOOST_DB       = float(os.getenv("WARMTH_BOOST_DB", "4.0"))
-WARMTH_BOOST_FREQ     = int(os.getenv("WARMTH_BOOST_FREQ", "300"))
-VOCAL_BOOST_DB        = float(os.getenv("VOCAL_BOOST_DB", "3.0"))      # New: Vocal presence
-VOCAL_BOOST_FREQ      = int(os.getenv("VOCAL_BOOST_FREQ", "2500"))    # New: Vocal range center
-HIGH_NOTE_CUT_DB      = float(os.getenv("HIGH_NOTE_CUT_DB", "-3.0"))  # New: Tinny highs
-HIGH_NOTE_CUT_FREQ    = int(os.getenv("HIGH_NOTE_CUT_FREQ", "7500"))
-
-# Fallback paths
+# Required path validation
 if not CLEANING_LIST:
-    CLEANING_LIST = r"C:\Users\patty\miniconda3\Scripts\music-download\Lists\Cleaning_List.txt"
+    raise ValueError("CLEANING_LIST is not set in .env")
 if not DIAGNOSE_SOURCE:
-    DIAGNOSE_SOURCE = r"E:\aadamjacobs\Originals\WAV"
+    raise ValueError("DIAGNOSE_SOURCE is not set in .env")
 if not CLEANED_1:
-    CLEANED_1 = r"E:\aadamjacobs\Transformed\Cleaned_1"
+    raise ValueError("CLEANED_1 is not set in .env")
+if not TRANSFORM_CONFIG:
+    raise ValueError("TRANSFORM_CONFIG is not set in .env file. Please add it.")
 
-print("Batch Audio Cleaner Configuration:")
-print(f"   GAIN_REDUCTION_DB = {GAIN_REDUCTION_DB} dB")
-print(f"   HIGH_PASS_FREQ    = {HIGH_PASS_FREQ} Hz")
-print(f"   HARSH_CUT         = {HARSH_CUT_DB} dB @ {HARSH_CUT_FREQ} Hz")
-print(f"   WARMTH_BOOST      = {WARMTH_BOOST_DB} dB @ {WARMTH_BOOST_FREQ} Hz")
-print(f"   VOCAL_BOOST       = {VOCAL_BOOST_DB} dB @ {VOCAL_BOOST_FREQ} Hz")
-print(f"   HIGH_NOTE_CUT     = {HIGH_NOTE_CUT_DB} dB @ {HIGH_NOTE_CUT_FREQ} Hz")
-print("-" * 85)
+print("Batch Audio Cleaner Configuration (from .env):")
+print(f"   CLEANING_LIST    = {CLEANING_LIST}")
+print(f"   DIAGNOSE_SOURCE  = {DIAGNOSE_SOURCE}")
+print(f"   CLEANED_1        = {CLEANED_1}")
+print(f"   TRANSFORM_CONFIG = {TRANSFORM_CONFIG}")
+print("-" * 90)
+
+# ========================== LOAD AUDIO CONFIG FROM TRANSFORM_CONFIG ==========================
+config_path = Path(TRANSFORM_CONFIG)
+
+if not config_path.exists():
+    raise FileNotFoundError(f"transform_configuration.txt not found at the location specified in .env:\n"
+                            f"{TRANSFORM_CONFIG}\n\n"
+                            f"Please create the file at that exact path.")
+
+# Load all transform settings
+with open(config_path, "r", encoding="utf-8") as f:
+    for line in f:
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" in line:
+            key, value = [x.strip() for x in line.split("=", 1)]
+            if key in ["GAIN_REDUCTION_DB", "HARSH_CUT_DB", "GUITAR_DRUM_CUT_DB",
+                       "WARMTH_BOOST_DB", "VOCAL_BOOST_DB", "HIGH_NOTE_CUT_DB",
+                       "SNARE_BODY_BOOST_DB"]:
+                globals()[key] = float(value)
+            elif key in ["HIGH_PASS_FREQ", "HARSH_CUT_FREQ", "GUITAR_DRUM_CUT_FREQ",
+                         "WARMTH_BOOST_FREQ", "VOCAL_BOOST_FREQ", "HIGH_NOTE_CUT_FREQ",
+                         "SNARE_BODY_BOOST_FREQ"]:
+                globals()[key] = int(value)
+
+print("Audio Transform Settings loaded successfully:")
+print(f"   GAIN_REDUCTION_DB   = {GAIN_REDUCTION_DB} dB")
+print(f"   HIGH_PASS_FREQ      = {HIGH_PASS_FREQ} Hz")
+print(f"   HARSH_CUT           = {HARSH_CUT_DB} dB @ {HARSH_CUT_FREQ} Hz")
+print(f"   GUITAR_DRUM_CUT     = {GUITAR_DRUM_CUT_DB} dB @ {GUITAR_DRUM_CUT_FREQ} Hz")
+print(f"   SNARE_BODY_BOOST    = {SNARE_BODY_BOOST_DB} dB @ {SNARE_BODY_BOOST_FREQ} Hz")
+print(f"   WARMTH_BOOST        = {WARMTH_BOOST_DB} dB @ {WARMTH_BOOST_FREQ} Hz")
+print(f"   VOCAL_BOOST         = {VOCAL_BOOST_DB} dB @ {VOCAL_BOOST_FREQ} Hz")
+print(f"   HIGH_NOTE_CUT       = {HIGH_NOTE_CUT_DB} dB @ {HIGH_NOTE_CUT_FREQ} Hz")
+print("-" * 90)
 
 Path(CLEANED_1).mkdir(parents=True, exist_ok=True)
 
@@ -65,41 +92,49 @@ def clean_audio(input_path: str, output_path: str):
         audio = AudioSegment.from_file(input_path, format="wav")
         original_peak = audio.max_dBFS
 
-        # 1. Gentle overall gain reduction for headroom
+        # 1. Gain reduction for headroom
         if original_peak > -3.0:
             audio = audio.apply_gain(GAIN_REDUCTION_DB)
 
-        # 2. High-Pass Filter - Remove rumble
+        # 2. High-pass filter (rumble removal)
         audio = audio.high_pass_filter(HIGH_PASS_FREQ)
 
-        # 3. Harshness cut (cymbals)
+        # 3. Broad harshness cut
         if HARSH_CUT_DB < 0:
             audio = audio.low_pass_filter(HARSH_CUT_FREQ)
 
-        # 4. Warmth boost for thin mix
-        if WARMTH_BOOST_DB > 0:
-            audio = audio.apply_gain(WARMTH_BOOST_DB * 0.6)
+        # 4. Guitar & drum tinny high-note cut
+        if GUITAR_DRUM_CUT_DB < 0:
+            audio = audio.low_pass_filter(GUITAR_DRUM_CUT_FREQ)
 
-        # 5. Vocal presence boost (mid-range)
+        # 5. Snare drum body boost
+        if SNARE_BODY_BOOST_DB > 0:
+            audio = audio.apply_gain(SNARE_BODY_BOOST_DB * 0.7)
+
+        # 6. Warmth boost for overall thin mix
+        if WARMTH_BOOST_DB > 0:
+            audio = audio.apply_gain(WARMTH_BOOST_DB * 0.65)
+
+        # 7. Vocal presence boost
         if VOCAL_BOOST_DB > 0:
             audio = audio.apply_gain(VOCAL_BOOST_DB * 0.7)
 
-        # 6. Tinny high notes cut (for distorted highs)
+        # 8. Final tinny high-note cut
         if HIGH_NOTE_CUT_DB < 0:
             audio = audio.low_pass_filter(HIGH_NOTE_CUT_FREQ)
 
         audio.export(output_path, format="wav")
 
-        return True, "Full processing applied (Gain + HPF + EQs)", round(audio.max_dBFS, 2)
+        return True, "Full processing applied", round(audio.max_dBFS, 2)
 
     except Exception as e:
         return False, f"Error: {str(e)}", None
 
 
 def main():
-    print("=" * 85)
-    print("BATCH AUDIO CLEANER - Vocal Boost + Tinny Highs Fix")
-    print("=" * 85)
+    print("=" * 90)
+    print("BATCH AUDIO CLEANER - Snare Body + Stronger Vocal Boost")
+    print("=" * 90)
 
     if not os.path.exists(CLEANING_LIST):
         print(f"Error: Cleaning list not found -> {CLEANING_LIST}")
@@ -115,7 +150,7 @@ def main():
 
     with open(log_file, "w", encoding="utf-8") as log:
         log.write(f"Batch Cleaning Log - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        log.write("=" * 85 + "\n\n")
+        log.write("=" * 90 + "\n\n")
 
         for filename in tqdm(file_list, desc="Cleaning files"):
             wav_file = find_wav_file(filename, source_root)

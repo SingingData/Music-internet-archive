@@ -1,0 +1,36 @@
+# =============================================================================
+# AUDIO TRANSFORM CONFIGURATION
+# =============================================================================
+# All dB and frequency values for cleaning are now here.
+# Edit the numbers below and re-run the script.
+
+GAIN_REDUCTION_DB=-5.0
+# Overall volume reduction for safe headroom (recommended -4.0 to -6.0)
+
+HIGH_PASS_FREQ=100
+# Removes low rumble below this frequency (Hz)
+
+HARSH_CUT_DB=-4.5
+HARSH_CUT_FREQ=5200
+# Broad cut for general harshness / cymbals
+
+GUITAR_DRUM_CUT_DB=-5.0
+GUITAR_DRUM_CUT_FREQ=6800
+# Targeted cut for tinny guitar high notes and drum overtones
+
+# === NEW: Snare drum body boost (addresses thin snare) ===
+SNARE_BODY_BOOST_DB=4.5
+SNARE_BODY_BOOST_FREQ=280
+# Boosts low-mid body so snare has more weight and fullness
+
+WARMTH_BOOST_DB=4.5
+WARMTH_BOOST_FREQ=290
+# Overall warmth for thin mix
+
+VOCAL_BOOST_DB=4.5
+VOCAL_BOOST_FREQ=2500
+# Increased vocal presence (was 3.5) so vocals sit better in the mix
+
+HIGH_NOTE_CUT_DB=-3.5
+HIGH_NOTE_CUT_FREQ=7800
+# Final cut for tinny/distorted high peaks
