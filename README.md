@@ -3,3 +3,26 @@
 ### Scripts to list, get sizes and download media files on internet archive.
 
 
+#### Scripts:
+
+#### estimate_size.py
+##### Get list of flac files on the drive and estimate size to download.
+
+#### download_flacs_to_usb_claude-grok.py
+##### download the flacs to a local location.  
+
+#### convert_flac_to_wav.py
+##### Convert file format from flac to wav for transformation and playback.  (Lossless)
+
+#### find_artist_wavs.py
+##### Find files of specific artists from file location for transform
+
+#### batch_clean_wav.py
+##### Transforms based on configurations found in 'Transform_Configuration' directory location to improve audio quality.
+
+#### diagnose_audio.py
+##### Simple diagnostic of levels in the WAV file.
+
+#### Transform_Configuration
+##### Configurations in txt file within that designate levels for audio improvement.
+
