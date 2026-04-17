@@ -3,7 +3,7 @@
 ### Scripts to list, get sizes and download media files on internet archive.
 Inspired by Adam Jacobs and his collection.  https://blockclubchicago.org/2026/04/10/from-early-nirvana-to-phish-a-chicago-fans-secret-recordings-of-10000-shows-are-now-online/?utm_content=bufferfdba3&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
-#### Scripts:
+## Scripts:
 
 ### get_file_list_and_estimate_size.py
 Get list of flac files on the drive and estimate size to download.  
@@ -18,21 +18,21 @@ Variables from .env file used for inputs and exports in this script:
 - DOWNLOAD_BASE_PATH - Where to download the folders and files. {output}
 - GET_LIST - List of performances to download {input}
 
-#### convert_flac_to_wav.py
+### convert_flac_to_wav.py
 Convert file format from flac to wav for transformation and playback.  (Lossless)
 
-#### find_artist_wavs.py
+### find_artist_wavs.py
 Find files of specific artists from file location for transform
 
-#### batch_clean_wav.py
+### batch_clean_wav.py
 Transforms based on configurations found in 'Transform_Configuration' directory location to improve audio quality.
 
-#### diagnose_audio.py
+### diagnose_audio.py
 Simple diagnostic of levels in the WAV file.
 
-#### Transform_Configuration
+### Transform_Configuration
 Configurations in txt file within that designate levels for audio improvement.
 
-#### Mock_dot_env_file
+### Mock_dot_env_file
 Create your .env file with this format - configure with your own path files.  Save this at the same folder location as the scripts.
 
