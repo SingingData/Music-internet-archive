@@ -7,32 +7,37 @@ Inspired by Adam Jacobs and his collection.  https://blockclubchicago.org/2026/0
 
 ### get_file_list_and_estimate_size.py
 Get list of flac files on the drive and estimate size to download.  
-Variables from .env file used for inputs and exports in this script:
+Variables from .env file used in this script:
 - COLLECTION_ID - Which Archive.org collection to analyze (e.g. aadamjacobs) {input}
 - PERFORMANCE_SUMMARY - Output summary report will be saved {output}
 - PERFORMANCE_LIST_WITH_SIZES - Output list of each of the performances with size detail {output}
 
 ### download_flacs_to_usb_claude-grok.py
 find and download the flac files from a repo on internet archive to a local location.  
-Variables from .env file used for inputs and exports in this script:
+Variables from .env file used in this script:
 - DOWNLOAD_BASE_PATH - Where to download the folders and files. {output}
 - GET_LIST - List of performances to download {input}
 
 ### convert_flac_to_wav.py
 Convert file format from flac to wav for transformation and playback.  (Lossless)
-Variables from .env file used or inputs and exports in this script:
+Variables from .env file used in this script:
 - FLAC_INPUT_ROOT
 - WAV_OUTPUT_ROOT
 
 ### find_artist_wavs.py
 Find files of specific artists from file location for transform
-Variables from .env file used or inputs and exports in this script:
+Variables from .env file used in this script:
 - DIAGNOSE_SOURCE - Root folder to search recursively for .wav files
 - ARTIST_LIST - Text file containing artist names to search for (one per line) {input}
 - ARTIST_REPORTS - Folder where the search result reports will be saved {output}
 
 ### batch_clean_wav.py
 Transforms based on configurations found in 'Transform_Configuration' directory location to improve audio quality.
+Variables from .env file used in this script:
+- CLEANING_LIST - Path to the text file containing the list of filenames to clean/process
+- DIAGNOSE_SOURCE - Root folder where the original WAV files are located (used for searching)
+- CLEANED_1 - Primary output folder where cleaned WAV files will be saved
+- TRANSFORM_CONFIG - Path to the configuration file (transform_configuration.txt) that contains audio processing settings (gain, EQ, frequencies, etc.)
 
 ### diagnose_audio.py
 Simple diagnostic of levels in the WAV file.
