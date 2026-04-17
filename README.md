@@ -14,6 +14,9 @@ Variables from .env file used for inputs and exports in this script:
 
 #### download_flacs_to_usb_claude-grok.py
 find and download the flac files from a repo on internet archive to a local location.  
+Variables from .env file used for inputs and exports in this script:
+- DOWNLOAD_BASE_PATH - Where to download the folders and files. {output}
+- GET_LIST - List of performances to download {input}
 
 #### convert_flac_to_wav.py
 Convert file format from flac to wav for transformation and playback.  (Lossless)
