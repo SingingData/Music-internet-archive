@@ -5,14 +5,14 @@ Inspired by Adam Jacobs and his collection.  https://blockclubchicago.org/2026/0
 
 #### Scripts:
 
-#### get_file_list_and_estimate_size.py
+### get_file_list_and_estimate_size.py
 Get list of flac files on the drive and estimate size to download.  
 Variables from .env file used for inputs and exports in this script:
 - COLLECTION_ID - Which Archive.org collection to analyze (e.g. aadamjacobs) {input}
 - PERFORMANCE_SUMMARY - Output summary report will be saved {output}
 - PERFORMANCE_LIST_WITH_SIZES - Output list of each of the performances with size detail {output}
 
-#### download_flacs_to_usb_claude-grok.py
+### download_flacs_to_usb_claude-grok.py
 find and download the flac files from a repo on internet archive to a local location.  
 Variables from .env file used for inputs and exports in this script:
 - DOWNLOAD_BASE_PATH - Where to download the folders and files. {output}
