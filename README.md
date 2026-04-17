@@ -5,8 +5,8 @@ Inspired by Adam Jacobs and his collection.  https://blockclubchicago.org/2026/0
 
 #### Scripts:
 
-#### estimate_size.py
-Get list of flac files on the drive and estimate size to download.
+#### get_file_list_and_estimate_size.py
+Get list of flac files on the drive and estimate size to download.  
 
 #### download_flacs_to_usb_claude-grok.py
 find and download the flac files from a repo on internet archive to a local location.  
