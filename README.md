@@ -41,6 +41,10 @@ Variables from .env file used in this script:
 
 ### diagnose_audio.py
 Simple diagnostic of levels in the WAV file.
+Variables from .env file used in this script:
+- DIAGNOSE_LIST - Path to the text file containing the list of filenames (or stems) to diagnose
+- DIAGNOSE_SOURCE - Root folder where the script searches recursively for the WAV files
+- DIAGNOSE_OUTPUT - Folder where the diagnosis reports (CSV and TXT) will be saved
 
 ### Transform_Configuration
 Configurations in txt file within that designate levels for audio improvement.
