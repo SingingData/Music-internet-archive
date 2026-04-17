@@ -2,9 +2,8 @@
 """
 SELECTIVE FLAC DOWNLOADER — From item list to target path
 ======================================================
-Downloads only FLAC files for the Archive.org item IDs listed in get_list.txt
-
-Configuration now comes from .env file (DOWNLOAD_BASE_PATH)
+Downloads only FLAC files for the Archive.org item IDs listed in the file
+specified by GET_LIST in the .env file (defaults to get_list.txt)
 """
 
 import urllib.request
@@ -26,13 +25,13 @@ if dotenv_path:
     load_dotenv(dotenv_path)
     print(f"✅ Loaded .env from: {dotenv_path}")
 else:
-    print("⚠️  No .env file found. Create one with DOWNLOAD_BASE_PATH=...")
+    print("⚠️  No .env file found. Create one with DOWNLOAD_BASE_PATH=... and GET_LIST=...")
 
 # ── Configuration from .env (with CLI override) ─────────────────────────────
 DEFAULT_BASE_PATH = os.getenv("DOWNLOAD_BASE_PATH")
+DEFAULT_GET_LIST = os.getenv("GET_LIST", "get_list.txt")   # ← NEW: configurable via .env
 
 # ── Other settings (can also be moved to .env later if desired) ─────────────
-ITEM_LIST_FILE = "get_list.txt"
 RETRY_ATTEMPTS = 3
 RETRY_DELAY = 5
 
@@ -179,7 +178,7 @@ def safe_folder_name(name):
         name = name.replace(ch, "_")
     return name.strip()
 
-def main(base_path: str):
+def main(base_path: str, list_path: str):
     global LOG_FILE, FAILED_FILE, SUCCESS_FILE
 
     LOG_FILE = os.path.join(base_path, "_download_log.txt")
@@ -188,13 +187,13 @@ def main(base_path: str):
 
     print("=" * 72)
     print(" SELECTIVE FLAC DOWNLOADER — From list to target path")
-    print(f" Base path : {base_path}")
-    print(f" Item list file : {ITEM_LIST_FILE}")
+    print(f" Base path     : {base_path}")
+    print(f" Item list file: {list_path}")
     print("=" * 72)
 
     os.makedirs(base_path, exist_ok=True)
 
-    item_ids = load_item_ids_from_file(ITEM_LIST_FILE)
+    item_ids = load_item_ids_from_file(list_path)
     print(f"\n✔ Loaded {len(item_ids)} unique item IDs.\n")
 
     total_downloaded = 0
@@ -258,13 +257,19 @@ if __name__ == "__main__":
         default=DEFAULT_BASE_PATH,
         help="Base path where item folders will be created (overrides DOWNLOAD_BASE_PATH in .env)"
     )
+    parser.add_argument(
+        "--list", "-l",
+        default=DEFAULT_GET_LIST,
+        help="Path to the item list file (overrides GET_LIST in .env)"
+    )
     args = parser.parse_args()
 
     if not args.base_path:
         print("❌ ERROR: No base path provided.")
         print("   → Create a .env file with:")
         print("     DOWNLOAD_BASE_PATH=/path/to/your/usb/or/folder")
-        print("   → Or run with: --base_path /your/path")
+        print("     GET_LIST=/path/to/your/get_list.txt")
+        print("   → Or run with: --base_path /your/path --list /path/to/list.txt")
         sys.exit(1)
 
-    main(args.base_path)
+    main(args.base_path, args.list)

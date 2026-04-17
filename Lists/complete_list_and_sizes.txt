@@ -1,0 +1,11 @@
+FLAC Size Report for collection 'aadamjacobs' — 2026-04-16 13:24:10
+=====================================================================================
+
+Total items scanned          : 2492
+Items with FLAC files        : 2489
+Items without FLAC files     : 3
+Total FLAC files             : 31800
+Total FLAC size              : 931.14 GB
+Exact size (bytes)           : 931,139,627,833
+
+Recommended free space (+5% buffer): 977.70 GB
