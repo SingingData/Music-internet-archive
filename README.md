@@ -48,6 +48,7 @@ Variables from .env file used in this script:
 
 ### Transform_Configuration
 Configurations in txt file within that designate levels for audio improvement.
+TRANSFORM_CONFIG - Path to the text file with configuration specifics for the transformation saved as transformation_configuration.txt
 
 ### Mock_dot_env_file
 Create your .env file with this format - configure with your own path files.  Save this at the same folder location as the scripts.
