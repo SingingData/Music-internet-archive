@@ -26,6 +26,10 @@ Variables from .env file used or inputs and exports in this script:
 
 ### find_artist_wavs.py
 Find files of specific artists from file location for transform
+Variables from .env file used or inputs and exports in this script:
+- DIAGNOSE_SOURCE - Root folder to search recursively for .wav files
+- ARTIST_LIST - Text file containing artist names to search for (one per line) {input}
+- ARTIST_REPORTS - Folder where the search result reports will be saved {output}
 
 ### batch_clean_wav.py
 Transforms based on configurations found in 'Transform_Configuration' directory location to improve audio quality.
