@@ -1,8 +1,8 @@
 """
 ESTIMATE TOTAL FLAC SIZE — With Detailed Performance List
 =========================================================
-- Logs every performance with file count and size
-- Saves detailed list to the path specified in PERFORMANCE_LIST_WITH_SIZES
+- Summary report now saved to PERFORMANCE_SUMMARY/performance_summary.txt
+- Detailed list still saved to PERFORMANCE_LIST_WITH_SIZES
 """
 
 import os
@@ -20,20 +20,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 COLLECTION_ID = os.getenv("COLLECTION_ID", "aadamjacobs")
-ARTIST_REPORTS = os.getenv("ARTIST_REPORTS")
+ARTIST_REPORTS = os.getenv("ARTIST_REPORTS")                    # Still used for other reports if needed
 PERFORMANCE_LIST_WITH_SIZES = os.getenv("PERFORMANCE_LIST_WITH_SIZES")
+PERFORMANCE_SUMMARY = os.getenv("PERFORMANCE_SUMMARY")          # ← NEW: Controls summary location
 
-if not ARTIST_REPORTS:
-    raise ValueError("ARTIST_REPORTS is not set in .env file")
+if not PERFORMANCE_SUMMARY:
+    raise ValueError("PERFORMANCE_SUMMARY is not set in .env file")
 if not PERFORMANCE_LIST_WITH_SIZES:
     raise ValueError("PERFORMANCE_LIST_WITH_SIZES is not set in .env file")
 
-REPORT_DIR = Path(ARTIST_REPORTS)
-REPORT_DIR.mkdir(parents=True, exist_ok=True)
-
-# Ensure the output directory for the performance list exists
-PERFORMANCE_PATH = Path(PERFORMANCE_LIST_WITH_SIZES)
-PERFORMANCE_PATH.parent.mkdir(parents=True, exist_ok=True)
+# Create directories
+Path(PERFORMANCE_SUMMARY).mkdir(parents=True, exist_ok=True)
+Path(PERFORMANCE_LIST_WITH_SIZES).parent.mkdir(parents=True, exist_ok=True)
 
 # ========================== SETTINGS ==========================
 ROWS_PER_PAGE = 200
@@ -43,8 +41,8 @@ BASE_DELAY = 1.5
 print("=" * 80)
 print("FLAC SIZE ESTIMATOR — With Detailed Performance List")
 print(f"Collection : {COLLECTION_ID}")
-print(f"Detailed list will be saved to: {PERFORMANCE_LIST_WITH_SIZES}")
-print(f"Summary report will be saved to: {REPORT_DIR}/complete_list_and_sizes.txt")
+print(f"Performance Summary : {PERFORMANCE_SUMMARY}/performance_summary.txt")
+print(f"Detailed List       : {PERFORMANCE_LIST_WITH_SIZES}")
 print("=" * 80)
 
 
@@ -156,7 +154,7 @@ def main():
     grand_total_files = 0
     items_with_flac = 0
 
-    performance_list = []   # ← Will store all performances
+    performance_list = []
 
     print("📂 Fetching FLAC sizes using parallel requests...\n")
 
@@ -168,8 +166,6 @@ def main():
             item_id = future_to_item[future]
             try:
                 item_id, flac_count, item_bytes = future.result()
-
-                # Store for the detailed list
                 performance_list.append((item_id, flac_count, item_bytes))
 
                 if flac_count > 0:
@@ -186,7 +182,6 @@ def main():
 
     # ====================== SAVE DETAILED PERFORMANCE LIST ======================
     print(f"\n💾 Saving detailed performance list to: {PERFORMANCE_LIST_WITH_SIZES}")
-
     with open(PERFORMANCE_LIST_WITH_SIZES, "w", encoding="utf-8") as f:
         f.write(f"PERFORMANCE LIST WITH SIZES — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("=" * 85 + "\n\n")
@@ -199,11 +194,15 @@ def main():
             else:
                 f.write(f"[0 files] {item_id} — (no FLAC files)\n")
 
-    # ====================== SAVE SUMMARY REPORT ======================
-    report_path = REPORT_DIR / "complete_list_and_sizes.txt"
-    with open(report_path, "w", encoding="utf-8") as f:
-        f.write(f"FLAC Size Report for collection '{COLLECTION_ID}' — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+    # ====================== SAVE PERFORMANCE SUMMARY ======================
+    summary_path = Path(PERFORMANCE_SUMMARY) / "performance_summary.txt"
+    print(f"💾 Saving performance summary to: {summary_path}")
+
+    with open(summary_path, "w", encoding="utf-8") as f:
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f.write(f"PERFORMANCE SUMMARY — {timestamp}\n")
         f.write("=" * 85 + "\n\n")
+        f.write(f"Collection                   : {COLLECTION_ID}\n")
         f.write(f"Total items scanned          : {len(item_ids)}\n")
         f.write(f"Items with FLAC files        : {items_with_flac}\n")
         f.write(f"Items without FLAC files     : {len(item_ids) - items_with_flac}\n")
@@ -216,9 +215,9 @@ def main():
     print("\n" + "=" * 85)
     print("SUMMARY")
     print("=" * 85)
-    print(f"Total FLAC size     : {human_readable(grand_total_bytes)}")
-    print(f"Detailed list saved : {PERFORMANCE_LIST_WITH_SIZES}")
-    print(f"Summary report saved: {report_path}")
+    print(f"Total FLAC size          : {human_readable(grand_total_bytes)}")
+    print(f"Performance Summary saved: {summary_path}")
+    print(f"Detailed List saved      : {PERFORMANCE_LIST_WITH_SIZES}")
     print("=" * 85)
 
 
