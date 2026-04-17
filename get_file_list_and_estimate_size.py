@@ -1,9 +1,8 @@
 """
-ESTIMATE TOTAL FLAC SIZE — Resilient Version
-============================================
-- Reduced ROWS_PER_PAGE to 200 for better reliability
-- Stronger exponential backoff with increased jitter
-- Saves final report to ARTIST_REPORTS/complete_list_and_sizes.txt
+ESTIMATE TOTAL FLAC SIZE — With Detailed Performance List
+=========================================================
+- Logs every performance with file count and size
+- Saves detailed list to the path specified in PERFORMANCE_LIST_WITH_SIZES
 """
 
 import os
@@ -22,27 +21,35 @@ load_dotenv()
 
 COLLECTION_ID = os.getenv("COLLECTION_ID", "aadamjacobs")
 ARTIST_REPORTS = os.getenv("ARTIST_REPORTS")
+PERFORMANCE_LIST_WITH_SIZES = os.getenv("PERFORMANCE_LIST_WITH_SIZES")
 
 if not ARTIST_REPORTS:
     raise ValueError("ARTIST_REPORTS is not set in .env file")
+if not PERFORMANCE_LIST_WITH_SIZES:
+    raise ValueError("PERFORMANCE_LIST_WITH_SIZES is not set in .env file")
 
 REPORT_DIR = Path(ARTIST_REPORTS)
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
+# Ensure the output directory for the performance list exists
+PERFORMANCE_PATH = Path(PERFORMANCE_LIST_WITH_SIZES)
+PERFORMANCE_PATH.parent.mkdir(parents=True, exist_ok=True)
+
 # ========================== SETTINGS ==========================
-ROWS_PER_PAGE = 200          # Reduced for better reliability on Archive.org
-MAX_WORKERS = 3              # Conservative parallel fetching
-BASE_DELAY = 1.5             # Increased base delay
+ROWS_PER_PAGE = 200
+MAX_WORKERS = 3
+BASE_DELAY = 1.5
 
 print("=" * 80)
-print("FLAC SIZE ESTIMATOR — Resilient Version")
+print("FLAC SIZE ESTIMATOR — With Detailed Performance List")
 print(f"Collection : {COLLECTION_ID}")
-print(f"Report will be saved to: {REPORT_DIR}/complete_list_and_sizes.txt")
+print(f"Detailed list will be saved to: {PERFORMANCE_LIST_WITH_SIZES}")
+print(f"Summary report will be saved to: {REPORT_DIR}/complete_list_and_sizes.txt")
 print("=" * 80)
 
 
 def fetch_url(url, retries=10):
-    """Stronger exponential backoff with more jitter."""
+    """Stronger exponential backoff with jitter."""
     for attempt in range(retries):
         try:
             req = urllib.request.Request(
@@ -57,10 +64,8 @@ def fetch_url(url, retries=10):
             with urllib.request.urlopen(req, timeout=90) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except Exception as e:
-            # Stronger backoff with more jitter
             wait = BASE_DELAY * (2 ** attempt) + random.uniform(2.0, 5.0)
             print(f"  ⚠ Attempt {attempt+1}/{retries} failed → waiting {wait:.1f}s")
-            print(f"     Error: {e}")
             if attempt < retries - 1:
                 time.sleep(wait)
     print(f"  ✗ Gave up after {retries} attempts on {url}")
@@ -68,7 +73,7 @@ def fetch_url(url, retries=10):
 
 
 def get_all_item_ids():
-    """Fetch all item identifiers with reduced page size."""
+    """Fetch all item identifiers."""
     item_ids = []
     page = 1
     print(f"\n🔍 Searching collection '{COLLECTION_ID}'...")
@@ -102,7 +107,7 @@ def get_all_item_ids():
             break
 
         page += 1
-        time.sleep(1.2)  # Polite delay between search pages
+        time.sleep(1.2)
 
     return item_ids
 
@@ -112,7 +117,7 @@ def get_flac_size_for_item(item_id):
     url = f"https://archive.org/metadata/{item_id}/files"
     data = fetch_url(url)
     if not data:
-        return 0, 0
+        return item_id, 0, 0
 
     total_bytes = 0
     flac_count = 0
@@ -130,7 +135,7 @@ def get_flac_size_for_item(item_id):
             total_bytes += size
             flac_count += 1
 
-    return flac_count, total_bytes
+    return item_id, flac_count, total_bytes
 
 
 def human_readable(size_bytes):
@@ -151,6 +156,8 @@ def main():
     grand_total_files = 0
     items_with_flac = 0
 
+    performance_list = []   # ← Will store all performances
+
     print("📂 Fetching FLAC sizes using parallel requests...\n")
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
@@ -160,7 +167,11 @@ def main():
         for future in as_completed(future_to_item):
             item_id = future_to_item[future]
             try:
-                flac_count, item_bytes = future.result()
+                item_id, flac_count, item_bytes = future.result()
+
+                # Store for the detailed list
+                performance_list.append((item_id, flac_count, item_bytes))
+
                 if flac_count > 0:
                     items_with_flac += 1
                     grand_total_bytes += item_bytes
@@ -171,13 +182,27 @@ def main():
                     print(f" [{len(item_ids)-items_with_flac:>4}/{len(item_ids)}] — {item_id} (no FLAC files)")
             except Exception as e:
                 print(f" ✗ Error processing {item_id}: {e}")
+                performance_list.append((item_id, 0, 0))
 
-    # ========================== SAVE REPORT ==========================
+    # ====================== SAVE DETAILED PERFORMANCE LIST ======================
+    print(f"\n💾 Saving detailed performance list to: {PERFORMANCE_LIST_WITH_SIZES}")
+
+    with open(PERFORMANCE_LIST_WITH_SIZES, "w", encoding="utf-8") as f:
+        f.write(f"PERFORMANCE LIST WITH SIZES — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write("=" * 85 + "\n\n")
+        f.write(f"Collection: {COLLECTION_ID}\n")
+        f.write(f"Total items: {len(item_ids)}\n\n")
+
+        for item_id, flac_count, size_bytes in performance_list:
+            if flac_count > 0:
+                f.write(f"[{flac_count:>2} files] {item_id} — {human_readable(size_bytes)}\n")
+            else:
+                f.write(f"[0 files] {item_id} — (no FLAC files)\n")
+
+    # ====================== SAVE SUMMARY REPORT ======================
     report_path = REPORT_DIR / "complete_list_and_sizes.txt"
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
     with open(report_path, "w", encoding="utf-8") as f:
-        f.write(f"FLAC Size Report for collection '{COLLECTION_ID}' — {timestamp}\n")
+        f.write(f"FLAC Size Report for collection '{COLLECTION_ID}' — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("=" * 85 + "\n\n")
         f.write(f"Total items scanned          : {len(item_ids)}\n")
         f.write(f"Items with FLAC files        : {items_with_flac}\n")
@@ -191,8 +216,9 @@ def main():
     print("\n" + "=" * 85)
     print("SUMMARY")
     print("=" * 85)
-    print(f"Total FLAC size : {human_readable(grand_total_bytes)}")
-    print(f"Report saved to : {report_path}")
+    print(f"Total FLAC size     : {human_readable(grand_total_bytes)}")
+    print(f"Detailed list saved : {PERFORMANCE_LIST_WITH_SIZES}")
+    print(f"Summary report saved: {report_path}")
     print("=" * 85)
 
 
