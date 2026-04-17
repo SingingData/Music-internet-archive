@@ -7,7 +7,7 @@ Inspired by Adam Jacobs and his collection.  https://blockclubchicago.org/2026/0
 
 #### get_file_list_and_estimate_size.py
 Get list of flac files on the drive and estimate size to download.  
-Variables from .env file
+Variables from .env file:
 COLLECTION_ID - Which Archive.org collection to analyze (e.g. aadamjacobs) {input}
 PERFORMANCE_SUMMARY - Output summary report will be saved {output}
 PERFORMANCE_LIST_WITH_SIZES - Output list of each of the performances with size detail {output}
