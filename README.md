@@ -20,6 +20,9 @@ Variables from .env file used for inputs and exports in this script:
 
 ### convert_flac_to_wav.py
 Convert file format from flac to wav for transformation and playback.  (Lossless)
+Variables from .env file used or inputs and exports in this script:
+- FLAC_INPUT_ROOT
+- WAV_OUTPUT_ROOT
 
 ### find_artist_wavs.py
 Find files of specific artists from file location for transform
